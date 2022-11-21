@@ -68,20 +68,12 @@ btnLogin.addEventListener("click", (e) => {
         let usuarioId = usuarios.filter(
           (usuario) => usuario.id == usuarioRecuperado.id
         );
-
+        
         let datosNuevos = document.querySelector("#datoUsuarioNuevo");
-        let items = [];
-        for (const atributo in usuario) {
-          let p = `<p>${atributo}: ${usuario[atributo]}</p>`;
-          items.push(p);
+        for (const elemento of usuarioId) {
+          datosNuevos.innerHTML = `<p>Te registraste con éxito, tus datos son: <br>Nombre: ${elemento.nombre}<br>Apellido: ${elemento.apellido}<br>D.N.I. N°: ${elemento.dni}<br>¡BIENVENIDO!</p> `;
+          
         }
-
-        let tituloNuevo = document.querySelector("#datoUsuarioNuevo");
-        tituloNuevo.innerHTML = `<p> Los datos para el nuevo usuario registrado son:</p>`;
-
-        items.forEach((item) => {
-          datosNuevos.innerHTML += JSON.stringify(item);
-        });
         
         setInterval("location.reload()", 20000);
       });
@@ -93,3 +85,4 @@ btnLogin.addEventListener("click", (e) => {
 btnCancelar.addEventListener("click", () => {
   btnReset.reset();
 });
+
