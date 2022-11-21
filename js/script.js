@@ -46,8 +46,8 @@ btnLogin.addEventListener("click", (e) => {
           };
         }
         const datosReserva = document.querySelector("#mostrarReserva");
-        datosReserva.innerHTML = `<p>Se ha generado la siguiente reserva para el día  ${usuario.reserva.fecha} de  ${usuario.reserva.hora}  hs. Gracias  ${usuario.nombre}  por usar nuestro gestor de reservas.</p> `;
-        setInterval("location.reload()", 10000);
+        datosReserva.innerHTML = `<p>SE HA GENERADO LA SIGUIENTE RESERVA<br>Fecha:  ${usuario.reserva.fecha}<br>Hora: ${usuario.reserva.hora} hs.<br> Gracias  <b>${usuario.nombre}</b> por usar nuestro gestor de reservas</p> `;
+        setInterval("location.reload()", 20000);
       });
     } else {
       document.querySelector(".login").style.display = "none";
@@ -71,7 +71,7 @@ btnLogin.addEventListener("click", (e) => {
         
         let datosNuevos = document.querySelector("#datoUsuarioNuevo");
         for (const elemento of usuarioId) {
-          datosNuevos.innerHTML = `<p>Te registraste con éxito, tus datos son: <br>Nombre: ${elemento.nombre}<br>Apellido: ${elemento.apellido}<br>D.N.I. N°: ${elemento.dni}<br>¡BIENVENIDO!</p> `;
+          datosNuevos.innerHTML = `<p>Te registraste con éxito, tus datos son: <br>Nombre: ${elemento.nombre}<br>Apellido: ${elemento.apellido}<br>D.N.I. N°: ${elemento.dni}<br><b>¡BIENVENIDO!</b></p> `;
           
         }
         
