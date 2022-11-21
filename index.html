@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reserva tu Cancha</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <script defer src="js/script.js"></script>
+</head>
+
+<body>
+  <header>
+    <header class="header">
+
+      <nav class="navbar navbar-dark navbar-expand-lg bg-blue">
+        <div class="container-fluid">
+          <img src="./img/logoSF.png" alt="Logo del gestor">
+        </div>
+      </nav>
+
+    </header>
+    <h1 class="titulo">Bienvenidos al sistema de reserva de tu cancha</h1>
+    <main>
+      <section class="login">
+        <div class="formLogin">
+          <form action="#" method="get" class="formucolor">
+            <label>Ingrese su DNI para continuar</label>
+            <div class="form-floating mb-3">
+              <input type="number" id="dni" placeholder="Documento" required>
+            </div>
+            <button id="btnLogin" type="submit" value="Ingresar">Ingresar</button>
+            <button id="btnReset" type="reset" value="Cancelar">Cancelar</button>
+          </form>
+        </div>
+      </section>
+      <br>
+
+      <div id="reserva">
+        <h2>Te damos la bienvenida ahora podés gestionar tu reserva</h2>
+        <br>
+        <form>
+          <label>
+            Selecciona la fecha de tu reserva:
+            <input class="diaConfirmado" type="date" name="reserva" min="2022-11-21" max="2022-12-31" />
+          </label>
+          <select class="horaConfirmada" aria-label="Hora de la reserva">
+            <option selected>Selecciona la hora de tu reserva</option>
+            <option value="9 a 10">9 a 10</option>
+            <option value="10 a 11">10 a 11</option>
+            <option value="11 a 12">11 a 12</option>
+            <option value="13 a 14">13 a 14</option>
+            <option value="14 a 15">14 a 15</option>
+          </select>
+          <button id="btnConfirmar" type="submit" value="Confirmar">Confirmar</button>
+        </form>
+        <div class="container" id="mostrarReserva">
+          <!-- cuando me genera la reserva se habilita la información -->
+        </div>
+
+
+      </div>
+
+      <div id="loginIncorrecto">
+        <h2>Usuario no registrado, te vamos a pedir unos datos para registrarte</h2>
+        <br>
+        <form>
+          <label>DNI</label>
+          <div class="form-floating mb-3">
+            <input type="number" id="dni" placeholder="Documento" required>
+          </div>
+
+          <label>Nombre</label>
+          <div class="form-floating mb-3">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+          </div>
+
+          <label>Apellido</label>
+          <div class="form-floating mb-3">
+            <input type="text" id="apellido" placeholder="Apellido" required>
+          </div>
+
+          <button id="btnRegistrarse" type="submit" value="Registro">Registrarse</button>
+          <button id="btnCancelar" type="reset">Cancelar</button>
+          
+        </form>
+      </div>
+      <div class="container" id="datoUsuarioNuevo">
+
+      </div>
+      
+
+    </main>
+</body>
+
+</html>
